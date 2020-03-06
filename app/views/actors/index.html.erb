@@ -1,0 +1,9 @@
+<h2> Actors </h2>
+
+<%= link_to "Create New Actor", actors_path %>
+
+<% @actors.each do |actor| %>
+    <h3><%= link_to actor.name, actor_roles_path(actor)%></h3>
+
+
+<% end %>

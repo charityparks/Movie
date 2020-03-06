@@ -1,0 +1,12 @@
+<h2> Add a new role for actor... <%= @actor.name %> </h2>
+
+<%= render partial: '/errors', locals: {record: @role} %>
+
+<%= form_for @role do |f| %>
+  <%= f.label :Movie %>
+  <div><%= f.collection_select :movie_id, Movie.all, :id, :title, prompt: true %></div>
+  <%= f.label :Category %>
+  <div><%= f.text_field :category %></div>
+  <%= f.hidden_field :actor_id, value: @actor.id %>
+  <%= f.submit "Create Role" %>
+<% end %>

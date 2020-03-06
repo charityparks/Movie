@@ -1,0 +1,9 @@
+<h2> Build a New Actor </h2>
+
+<%= render partial: '/errors', locals: { record: @actor}
+
+<%= form_for @actor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create and Add Roles" %>
+<% end %>
