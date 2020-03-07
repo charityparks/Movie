@@ -1,0 +1,15 @@
+// Place all the styles related to the movie controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('glitter.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</body>
+</style>
+</html>

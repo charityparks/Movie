@@ -1,0 +1,19 @@
+<h2>Add a New Movie </h2>
+
+<%= render partial: '/errors', locals: { record: @movie } %>
+
+<%= form_for @movie do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br><br>
+  <%= f.label :actor %>
+  <%= f.text_field :actor %><br><br>
+  <%= f.label :role %>
+  <%= f.text_field :role %><br><br>
+  <%= f.label :genre %>
+  <%= f.text_field :genre %><br><br>
+  <%= f.label :rating %>
+  <%= f.text_field :rating %><br><br>
+  <%= f.label :description %>
+  <%= f.text_area :description %><br><br>
+  <%= f.submit "Create New Movie" %>
+<% end %>
