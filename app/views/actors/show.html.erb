@@ -1,0 +1,7 @@
+<h1><%= @actor.name %></h1>
+
+<% @actor.movies.each do |movie| %>
+
+<p><b><%= movie.title %></b></p>
+<% end %>
+<%= button_to "Delete Actor", actor_role_path(@actor), method: :delete %>

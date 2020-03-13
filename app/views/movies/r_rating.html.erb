@@ -1,0 +1,7 @@
+<h1>R Rated Movies!</h1>
+
+<% @movies.each do |movie| %>
+<h2><p><b>*<%= movie.title %></b></p></h2>
+
+<% end %>
+<%= link_to "Movie Index", movies_path %>

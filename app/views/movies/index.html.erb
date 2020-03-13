@@ -1,19 +1,11 @@
 <h1>Movies!</h1>
 
-<%= link_to "All Movies", movies_path %><br>
-
-<%= link_to "   G Rated Movies   ", movies_g_rating_path %><br>
-<%= link_to "PG Rated Movies   ", movies_pg_rating_path %><br>
-<%= link_to "R Rated Movies   ", movies_r_rating_path %><br>
-
-<%= link_to "Add a Movie", new_movie_path %>
+<%= link_to "Add a Movie", new_movie_path %>  |
+<%= link_to "G Rated Movies", movies_g_rating_path %>  |
+<%= link_to "PG Rated Movies", movies_pg_rating_path %>  |
+<%= link_to "R Rated Movies", movies_r_rating_path %>
 
 <% @movies.each do |movie| %>
-   <p><b><%= movie.title %></b></p>
-   <p><%= movie.actor %></p>
-   <p><%= movie.role %></p>
-   <p><%= movie.genre %></p>
-   <p><%= movie.rating %></p>
-   <p><%= movie.description %></p>
+<h3><%= link_to movie.title, movie_path(movie)%></h3>
 
 <% end %>

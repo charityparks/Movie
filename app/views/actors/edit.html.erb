@@ -1,0 +1,9 @@
+<%= form_for(@actor) do |f| %>
+<%= f.label :name %><br>
+<%= f.text_area :name %><br>
+
+<%= f.label :role %><br>
+<%= f.text_field :role %><br>
+ 
+<%= f.submit "Submit Changes" %>
+<% end %>
