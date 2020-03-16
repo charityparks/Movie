@@ -16,4 +16,12 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
   end
 
+  def user_authorized?
+    @actor.user && @actor.user.id == current_user.id
+  end
+
+  def validate_actor
+    redirect_to actors_path if !@actor
+  end
+
 end

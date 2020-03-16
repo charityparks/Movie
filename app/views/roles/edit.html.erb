@@ -6,6 +6,6 @@
   <%= f.label :Movie %>
   <div><%= f.collection_select :movie_id, Movie.all, :id, :title, prompt: true %></div>
   <%= f.label :Category %>
-  <div><%= f.text_field :category %></div>
+  <div><%= f.text_field :category %></div><br>
   <%= f.submit "Create Role" %>
 <% end %>

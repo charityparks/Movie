@@ -3,9 +3,8 @@ Rails.application.routes.draw do
 
   resources :actors do
     resources :roles
-  resources :roles
-
   end
+  resources :roles
 
 
   get '/movies/g_rating', to: 'movies#g_rating'

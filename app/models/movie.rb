@@ -3,6 +3,10 @@ class Movie < ApplicationRecord
   has_many :roles
   has_many :actors, through: :roles
 
+  validates_presence_of :title
+
+
+
   scope :lead, -> { where(category: 'Lead')}
   scope :supporting_role, -> { where(category: 'Supporting Role')}
   scope :other, -> { where(category: 'Other')}
@@ -10,18 +14,14 @@ class Movie < ApplicationRecord
   scope :pg_rating, -> { where(rating: 'PG')}
   scope :r_rating, -> { where(rating: 'R')}
 
-  # def by_alphabet
-  #   Movie.order('name ASC')
-  # end
-
   # def self.lead
   #   self.where(category: "Lead")
   # end
+
   # def self.actor
   #   where("actor > 0")
   # end
 
-  #
   # def self.supporting_role
   #   self.where(category: "Supporting Role")
   # end

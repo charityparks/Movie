@@ -35,13 +35,12 @@ class ActorsController < ApplicationController
 
   def destroy
     Actor.find_by(id: params[:id]).destroy
-    redirect_to actor_path
+    redirect_to actors_path
   end
 
   private
 
   def actor_params
-    params.require(:actor).permit(:name, :movie_id, :title)
+    params.require(:actor).permit(:name)
   end
-
 end

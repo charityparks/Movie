@@ -14,15 +14,12 @@ ActiveRecord::Schema.define(version: 2020_03_10_002454) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
-    t.string "role"
     t.integer "user_id"
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "genre"
-    t.string "actor"
-    t.string "role"
     t.string "rating"
     t.text "description"
     t.integer "user_id"
@@ -44,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_002454) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.integer "github_uid"
   end
 

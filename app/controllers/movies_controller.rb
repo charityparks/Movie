@@ -4,7 +4,6 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     @movies = Movie.order('title ASC')
-
   end
 
   def new
@@ -38,10 +37,6 @@ class MoviesController < ApplicationController
     Movie.find_by(id: params[:id]).destroy
     redirect_to movies_path
   end
-  # def destroy
-  #   Movie.find_by(id: params[:id])
-  #   movie.destroy
-  # end
 
   def g_rating
     @movies = Movie.g_rating
@@ -61,6 +56,6 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:title, :actor, :role, :genre, :rating, :description)
+    params.require(:movie).permit(:title, :genre, :rating, :description)
   end
 end

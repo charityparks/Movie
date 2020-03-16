@@ -4,11 +4,6 @@
 
 <%= form_for @actor do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name %><br>
-    <div><%= f.label :Movie %>
-    <%= f.collection_select :movie_ids, Movie.all, :id, :title, prompt: true %></div><br>
-    <div><%= f.label :Category %>
-    <%= f.text_field :role %></div>
-    <%= f.hidden_field :actor_id, value: @actor.id %><br>
+    <%= f.text_field :name %><br><br>
     <%= f.submit "Create Actor" %>
 <% end %>

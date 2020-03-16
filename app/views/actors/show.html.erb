@@ -1,7 +1,14 @@
 <h1><%= @actor.name %></h1>
 
-<% @actor.movies.each do |movie| %>
 
-<p><b><%= movie.title %></b></p>
+<% @actor.movies.each do |movie| %>
+  <p>Movie:  <%= movie.title %></p>
+
 <% end %>
-<%= button_to "Delete Actor", actor_role_path(@actor), method: :delete %>
+
+<% @actor.roles.each do |role| %>
+<p>Category: <%=role.category %></p>
+<% end %>
+
+<p><%= link_to "Add a New Role", new_actor_role_path(@actor) %></p>
+<%= button_to "Delete Actor", actor_path(@actor), method: :delete %>

@@ -1,8 +1,8 @@
 <h1><%= @movie.title %></h1>
 <p><b>Genre:  <%= @movie.genre %></b></p>
+
 <p><b>Rating:  <%= @movie.rating %></b></p>
-<p><b>Actor:  <%= @movie.actor %></b>
-<p><b>Role:  <%= @movie.role %></b></p>
 <p><b>Description:  <%= @movie.description %></b></p>
-<p><%= link_to "Edit Movie", edit_movie_path %> | <%= link_to "Add Another Movie", new_movie_path %><br></p>
+
+<p><%= link_to "Edit Movie", edit_movie_path %> | <%= link_to "Add Another Movie", new_movie_path %> | <%= link_to "Add an Actor", new_actor_path %>
 <%= button_to "Delete Movie", movie_path(@movie), method: :delete %>
