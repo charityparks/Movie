@@ -2,8 +2,12 @@ class MoviesController < ApplicationController
   before_action :require_login, except: [:index]
 
   def index
-    @movies = Movie.all
-    @movies = Movie.order('title ASC')
+    if params[:search]
+      @movies = Movie.all.where(title: params[:search])
+      else
+        @movies = Movie.all
+        @movies = Movie.order('title ASC')
+      end
   end
 
   def new

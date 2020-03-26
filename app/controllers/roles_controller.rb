@@ -14,12 +14,6 @@ class RolesController < ApplicationController
       @role = Role.new(role_params)
       if @role.save
         render :new
-    #     redirect_to actor_roles_path(@role.actor)
-    #   else
-    #     render :new
-    #   end
-    # else
-    #   redirect_to actors_path
     end
   end
 
@@ -44,7 +38,6 @@ class RolesController < ApplicationController
 
     def get_role
       @role = Role.find_by(id: params[:id])
-      #meaning if @actor is nil, then execute...if its populated just keep as is.
     end
 
     def role_params
